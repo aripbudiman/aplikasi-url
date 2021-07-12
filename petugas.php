@@ -26,7 +26,7 @@
 <div class="home_content">
     <div class="text">
         <h3>Halaman Petugas</h3>
-        <h4 style="text-align: center;">Data petugas Cabang Bandung Barat</h4>
+        <h4 style="text-align: center;">Data petugas</h4>
 
         <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
