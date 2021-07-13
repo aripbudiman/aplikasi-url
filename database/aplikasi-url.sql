@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Jul 2021 pada 02.46
+-- Waktu pembuatan: 14 Jul 2021 pada 01.43
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 7.3.28
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `aplikasi-url`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `majelis`
+--
+
+CREATE TABLE `majelis` (
+  `no` int(11) NOT NULL,
+  `nama_majelis` varchar(150) NOT NULL,
+  `desa` varchar(150) NOT NULL,
+  `jadwal_layanan` varchar(150) NOT NULL,
+  `jumlah_anggota` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `majelis`
+--
+
+INSERT INTO `majelis` (`no`, `nama_majelis`, `desa`, `jadwal_layanan`, `jumlah_anggota`) VALUES
+(1, 'KBB_BURUNG MURAI', 'CIHANJUANG RAHAYU', 'SENIN', 12),
+(2, 'KBB_BURUNG ANIS', 'CIHANJUANG RAHAYU', 'SENIN', 23),
+(4, 'KBB_BUNGA HEBRAS', 'MALAYSIA', 'SENIN', 21);
 
 -- --------------------------------------------------------
 
@@ -47,11 +70,18 @@ INSERT INTO `petugas` (`no`, `nama_petugas`, `alamat`, `jabatan`) VALUES
 (7, 'Rian Andriani Aziz', 'Ciamis', 'TPL'),
 (15, 'Tendi Agus Maulana', 'Garut', 'TPL'),
 (16, 'steven ac', 'Ciamis', 'TPL'),
-(18, '', '', '');
+(19, 'Sulaeman', 'Garut2', 'TPL');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `majelis`
+--
+ALTER TABLE `majelis`
+  ADD PRIMARY KEY (`no`),
+  ADD UNIQUE KEY `nama_majelis` (`nama_majelis`);
 
 --
 -- Indeks untuk tabel `petugas`
@@ -64,10 +94,16 @@ ALTER TABLE `petugas`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `majelis`
+--
+ALTER TABLE `majelis`
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT untuk tabel `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `no` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `no` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
