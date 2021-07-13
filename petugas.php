@@ -27,7 +27,7 @@
     <div class="text">
         <h3>Halaman Petugas</h3>
         <h4 style="text-align: center;">Data petugas</h4>
-
+        <a class="btn btn-primary" href="add_petugas.php" role="button" style="margin-bottom: 5px;"><i class="fas fa-plus"></i>Add</a>
         <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
@@ -35,7 +35,8 @@
                     <th>Nama Petugas</th>
                     <th>Alamat</th>
                     <th>Jabatan</th>
-                    <th colspan="2"><a class="btn btn-primary" href="add_petugas.php" role="button" style="margin-bottom: 5px;"><i class="fas fa-plus"></i>Add</a></th>
+                    <th></th>
+                    <th></th>
 
                 </tr>
             </thead>
