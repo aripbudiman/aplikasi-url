@@ -28,7 +28,7 @@
                 <span class="tooltip">Data Petugas</span>
             </li>
             <li>
-                <a href="#">
+                <a href="majelis.php">
                     <i class="fas fa-layer-group"></i>
                     <span class="links_name">Majelis</span>
                 </a>
