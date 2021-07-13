@@ -35,8 +35,8 @@
                     <th>Nama Petugas</th>
                     <th>Alamat</th>
                     <th>Jabatan</th>
-                    <th></th>
-                    <th></th>
+                    <th><i class="fas fa-cogs"></i></th>
+                    <th><i class="fas fa-cogs"></i></th>
 
                 </tr>
             </thead>
