@@ -47,6 +47,7 @@ $data = mysqli_fetch_array($sql);
             <div class="ml-3">
                 <button type="submit" name="proses" class="btn btn-primary">Simpan</button>
             </div>
+
         </form>
         <?php
 
@@ -68,8 +69,6 @@ $data = mysqli_fetch_array($sql);
 
 
         ?>
-
-
 
 
 

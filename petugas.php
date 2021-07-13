@@ -24,30 +24,31 @@
 
 <!--main menu-->
 <div class="home_content">
-    <div class="text">
-        <h3>Halaman Petugas</h3>
-        <h4 style="text-align: center;">Data petugas</h4>
-        <a class="btn btn-primary" href="add_petugas.php" role="button" style="margin-bottom: 5px;"><i class="fas fa-plus"></i>Add</a>
-        <table id="example" class="table table-striped table-bordered" style="width:100%">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Nama Petugas</th>
-                    <th>Alamat</th>
-                    <th>Jabatan</th>
-                    <th><i class="fas fa-cogs"></i></th>
-                    <th><i class="fas fa-cogs"></i></th>
+    <div class="scroll">
+        <div class="text">
+            <h3>Halaman Petugas</h3>
+            <h4 style="text-align: center;">Data petugas</h4>
+            <a class="btn btn-primary" href="add_petugas.php" role="button" style="margin-bottom: 5px;"><i class="fas fa-plus"></i>Add</a>
+            <table id="example" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Petugas</th>
+                        <th>Alamat</th>
+                        <th>Jabatan</th>
+                        <th><i class="fas fa-cogs"></i></th>
+                        <th><i class="fas fa-cogs"></i></th>
 
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
 
-                include "koneksi.php";
-                $no = 1;
-                $ambildata = mysqli_query($koneksi, "SELECT * from petugas");
-                while ($tampil = mysqli_fetch_array($ambildata)) {
-                    echo "
+                    include "koneksi.php";
+                    $no = 1;
+                    $ambildata = mysqli_query($koneksi, "SELECT * from petugas");
+                    while ($tampil = mysqli_fetch_array($ambildata)) {
+                        echo "
                 
                     <tr>
                         <td>$no</td>
@@ -57,22 +58,22 @@
                         <td><a href='?kode=$tampil[no]'>Hapus</a></td>
                         <td><a href='petugas-ubah.php?kode=$tampil[nama_petugas]'> Ubah </a></td>
                      </tr>";
-                    $no++;
-                }
+                        $no++;
+                    }
 
-                ?>
-            </tbody>
-        </table>
-        <?php
-        if (isset($_GET['kode'])) {
+                    ?>
+                </tbody>
+            </table>
+            <?php
+            if (isset($_GET['kode'])) {
 
-            mysqli_query($koneksi, "delete from petugas where no='$_GET[kode]'");
+                mysqli_query($koneksi, "delete from petugas where no='$_GET[kode]'");
 
-            echo "Data telah terhapus";
-            echo  "<meta http-equiv=refresh content=2;URL='petugas.php'>";
-        }
-        ?>
+                echo "Data telah terhapus";
+                echo  "<meta http-equiv=refresh content=2;URL='petugas.php'>";
+            }
+            ?>
 
+        </div>
     </div>
-
     <?php include 'include/footer.php' ?>

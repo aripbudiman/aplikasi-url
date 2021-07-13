@@ -23,31 +23,32 @@
 
 <!--main menu-->
 <div class="home_content">
-    <div class="text">
-        <h3>Halaman Majelis</h3>
-        <h4 style="text-align: center;">Data Majelis</h4>
-        <a class="btn btn-primary" href="add_majelis.php" role="button" style="margin-bottom: 5px;"><i class="fas fa-plus"></i>Add</a>
-        <table id="example" class="table table-striped table-bordered" style="width:100%">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Nama Majelis</th>
-                    <th>Desa</th>
-                    <th>Jadwal Layanan</th>
-                    <th>Jumlah Anggota</th>
-                    <th><i class="fas fa-cogs"></i></th>
-                    <th><i class="fas fa-cogs"></i></th>
+    <div class="scroll">
+        <div class="text">
+            <h3>Halaman Majelis</h3>
+            <h4 style="text-align: center;">Data Majelis</h4>
+            <a class="btn btn-primary" href="add_majelis.php" role="button" style="margin-bottom: 5px;"><i class="fas fa-plus"></i>Add</a>
+            <table id="example" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Majelis</th>
+                        <th>Desa</th>
+                        <th>Jadwal Layanan</th>
+                        <th>Jumlah Anggota</th>
+                        <th><i class="fas fa-cogs"></i></th>
+                        <th><i class="fas fa-cogs"></i></th>
 
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
 
-                include "koneksi.php";
-                $no = 1;
-                $ambildata = mysqli_query($koneksi, "SELECT * from majelis");
-                while ($tampil = mysqli_fetch_array($ambildata)) {
-                    echo "
+                    include "koneksi.php";
+                    $no = 1;
+                    $ambildata = mysqli_query($koneksi, "SELECT * from majelis");
+                    while ($tampil = mysqli_fetch_array($ambildata)) {
+                        echo "
 
     <tr>
         <td>$no</td>
@@ -58,23 +59,23 @@
         <td><a href='?kode=$tampil[no]'>Hapus</a></td>
         <td><a href='majelis-ubah.php?kode=$tampil[nama_majelis]'> Ubah </a></td>
      </tr>";
-                    $no++;
-                }
+                        $no++;
+                    }
 
-                ?>
-            </tbody>
-        </table>
-        <?php
-        if (isset($_GET['kode'])) {
+                    ?>
+                </tbody>
+            </table>
+            <?php
+            if (isset($_GET['kode'])) {
 
-            mysqli_query($koneksi, "delete from majelis where no='$_GET[kode]'");
+                mysqli_query($koneksi, "delete from majelis where no='$_GET[kode]'");
 
-            echo "Data telah terhapus";
-            echo  "<meta http-equiv=refresh content=2;URL='majelis.php'>";
-        }
-        ?>
+                echo "Data telah terhapus";
+                echo  "<meta http-equiv=refresh content=2;URL='majelis.php'>";
+            }
+            ?>
+
+        </div>
 
     </div>
-
-
     <?php include 'include/footer.php' ?>

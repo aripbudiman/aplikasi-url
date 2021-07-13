@@ -244,3 +244,9 @@ margin-right: 0.5cm;
   width: calc(100% - 240px);
   left: 240px;
 }
+.scroll{
+  width: 100%;
+  padding: 10px;
+  overflow:scroll;
+  height: 100%;
+}
