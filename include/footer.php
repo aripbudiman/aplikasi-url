@@ -32,7 +32,7 @@
         var table = $('#example').DataTable({
 
             buttons: ['copy', 'csv', 'print', 'excel', 'pdf', 'colvis'],
-            dom: "<'row'<'col-md-4'l><'col-md-4'B><'col-md-4'f>>" +
+            dom: "<'row'<'col-md-3'l><'col-md-5'B><'col-md-4'f>>" +
                 "<'row'<'col-md-12'tr>>" +
                 "<'row'<'col-md-5'i><'col-md-7'p>>",
             lengthMenu: [
