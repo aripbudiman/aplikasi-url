@@ -24,19 +24,19 @@
         <h3>Form Tambah Majelis</h3>
 
         <form action="" method="POST">
-            <div class="mb-3 col-3">
+            <div class="mb-3 col-md-3">
                 <label for="nama petugas" class="form-label">Nama Majelis</label>
                 <input type="text" name="nama_majelis"><br>
             </div>
-            <div class="mb-3 col-3">
-                <label for="nama petugas" class="form-label">Desa</label>
+            <div class="mb-3 col-md-3">
+                <label for="nama petugas" class="form-label">Wilayah/Desa</label>
                 <input type="text" name="desa"><br>
             </div>
-            <div class="mb-3 col-3">
+            <div class="mb-3 col-md-3">
                 <label for="jabatan" class="form-label">Jadwal Layanan</label>
                 <input type="text" name="jadwal_layanan"><br>
             </div>
-            <div class="mb-3 col-3">
+            <div class="mb-3 col-md-3">
                 <label for="jabatan" class="form-label">Jumlah Anggota</label>
                 <input type="text" name="jumlah_anggota"><br>
             </div>
@@ -49,12 +49,12 @@
         include "koneksi.php";
         if (isset($_POST['proses'])) {
             mysqli_query($koneksi, "insert into majelis set
-        
+
         nama_majelis ='$_POST[nama_majelis]',
         desa ='$_POST[desa]',
         jadwal_layanan ='$_POST[jadwal_layanan]',
         jumlah_anggota ='$_POST[jumlah_anggota]'
-        
+
         ");
             echo "Data Majelis Baru Telah Tersimpan!";
             echo  "<meta http-equiv=refresh content=1;URL='majelis.php'>";

@@ -22,22 +22,25 @@
 <div class="home_content">
     <div class="text">
         <h3>Form Tambah Petugas</h3>
+        <div class="container">
+
 
         <form action="" method="POST">
-            <div class="mb-3 col-3">
+            <div class="mb-3 col-md-3">
                 <label for="nama petugas" class="form-label">Nama Petugas</label>
                 <input type="text" name="nama_petugas"><br>
             </div>
-            <div class="mb-3 col-3">
+            <div class="mb-3 col-md-3">
                 <label for="nama petugas" class="form-label">Alamat</label>
                 <input type="text" name="alamat"><br>
             </div>
-            <div class="mb-3 col-3">
+            <div class="mb-3 col-md-3">
                 <label for="jabatan" class="form-label">Jabatan</label>
                 <input type="text" name="jabatan"><br>
             </div>
             <div class="ml-3">
                 <button type="submit" name="proses" class="btn btn-primary">Simpan</button>
+            </div>
             </div>
         </form>
         <?php
@@ -45,11 +48,11 @@
         include "koneksi.php";
         if (isset($_POST['proses'])) {
             mysqli_query($koneksi, "insert into petugas set
-        
+
         nama_petugas ='$_POST[nama_petugas]',
         alamat ='$_POST[alamat]',
         jabatan      ='$_POST[jabatan]'
-        
+
         ");
             echo "Data Petugas Baru Telah Tersimpan!";
         }
