@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Jul 2021 pada 01.43
+-- Waktu pembuatan: 14 Jul 2021 pada 17.32
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 7.3.28
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `aplikasi-url`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `cashflow`
+--
+
+CREATE TABLE `cashflow` (
+  `no` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `tabungan_masuk` int(11) NOT NULL,
+  `tabungan_keluar` int(11) NOT NULL,
+  `saldo_akhir` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `cashflow`
+--
+
+INSERT INTO `cashflow` (`no`, `nama`, `tabungan_masuk`, `tabungan_keluar`, `saldo_akhir`) VALUES
+(1, 'arip', 5000, 2000, 0);
 
 -- --------------------------------------------------------
 
@@ -77,6 +98,12 @@ INSERT INTO `petugas` (`no`, `nama_petugas`, `alamat`, `jabatan`) VALUES
 --
 
 --
+-- Indeks untuk tabel `cashflow`
+--
+ALTER TABLE `cashflow`
+  ADD PRIMARY KEY (`no`);
+
+--
 -- Indeks untuk tabel `majelis`
 --
 ALTER TABLE `majelis`
@@ -94,10 +121,16 @@ ALTER TABLE `petugas`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `cashflow`
+--
+ALTER TABLE `cashflow`
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT untuk tabel `majelis`
 --
 ALTER TABLE `majelis`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `petugas`
