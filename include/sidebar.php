@@ -35,7 +35,7 @@
                 <span class="tooltip">Majelis</span>
             </li>
             <li>
-                <a href="#">
+                <a href="jadwal-pelayanan.php">
                     <i class="fas fa-calendar-week"></i>
                     <span class="links_name">Jadwal Pelayanan</span>
                 </a>

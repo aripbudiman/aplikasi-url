@@ -23,22 +23,22 @@
     <div class="text">
         <h3>Form Tambah Majelis</h3>
 
-        <form action="" method="POST">
+        <form action="" method="POST" onSubmit="validasi()">
             <div class="mb-3 col-md-3">
                 <label for="nama petugas" class="form-label">Nama Majelis</label>
-                <input type="text" name="nama_majelis"><br>
+                <input type="text" name="nama_majelis" id="namaMajelis"><br>
             </div>
             <div class="mb-3 col-md-3">
                 <label for="nama petugas" class="form-label">Wilayah/Desa</label>
-                <input type="text" name="desa"><br>
+                <input type="text" name="desa" id="wilayahDesa"><br>
             </div>
             <div class="mb-3 col-md-3">
                 <label for="jabatan" class="form-label">Jadwal Layanan</label>
-                <input type="text" name="jadwal_layanan"><br>
+                <input type="text" name="jadwal_layanan" id="jadwalLayanan"><br>
             </div>
             <div class="mb-3 col-md-3">
                 <label for="jabatan" class="form-label">Jumlah Anggota</label>
-                <input type="text" name="jumlah_anggota"><br>
+                <input type="text" name="jumlah_anggota" id="jumlahAnggota"><br>
             </div>
             <div class="ml-3">
                 <button type="submit" name="proses" class="btn btn-primary">Simpan</button>
@@ -64,7 +64,23 @@
 
         ?>
 
+        <script type="text/javascript">
+            function validasi() {
 
+                var namaMajelis = document.getElementById("nama_majelis").value;
+                var wilayahDesa = document.getElementById("desa").value;
+                var jadwalLayanan = document.getElementById("jadwal_layanan").value;
+                var jumlahAnggota = document.getElementById("jumlah_anggota").value;
+
+                if (namaMajelis != "" && wilayahDesa != "" && jadwalLayanan != "" && jumlahAnggota != "") {
+                    return true;
+                } else {
+                    alert('Anda harus mengisi form dengan lengkap!');
+                }
+
+
+            }
+        </script>
 
 
 
